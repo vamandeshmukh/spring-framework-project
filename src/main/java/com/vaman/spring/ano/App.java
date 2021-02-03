@@ -14,7 +14,7 @@ public class App {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(App.class);
 		Employee emp = ctx.getBean(Employee.class);
-		emp.work();
+		emp.work(); 
 	}
 
 }
