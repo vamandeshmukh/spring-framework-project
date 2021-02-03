@@ -6,35 +6,26 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * 
- * @author Vaman Deshmukh
+ * @author Vaman Deshmukh 
  *
  */
+
 
 public class App {
 
 	public static void main(String[] args) {
 
-//		Employee obj = new Employee(); 
-//		obj.work();
-
-		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
-
-//		Employee emp = (Employee) context.getBean("employee"); // also possible 
+		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig2.xml");
 
 		Employee emp = context.getBean("employee", Employee.class);
 		System.out.println(emp.toString());
-
 		Employee emp2 = context.getBean("employee2", Employee.class);
 		System.out.println(emp2.toString());
-
-		Department dept = context.getBean("department", Department.class);
-		System.out.println(dept.toString());
-
 		Employee emp3 = context.getBean("employee3", Employee.class);
 		System.out.println(emp3.toString());
 
-		Employee emp4 = context.getBean("employee4", Employee.class);
-		System.out.println(emp4.toString());
+		Person person = context.getBean("employee", Employee.class);
+		person.eat();
 
 		((AbstractApplicationContext) context).close();
 	}

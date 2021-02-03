@@ -68,10 +68,11 @@
 			</bean>
 		</property>
 	</bean>
-	
-		<!-- autowiring -->
 
-	<bean id="employee4" class="com.vaman.spring.demo.Employee" autowire="byName">
+	<!-- autowiring -->
+
+	<bean id="employee4" class="com.vaman.spring.demo.Employee"
+		autowire="byName">
 		<property name="id">
 			<value>104</value>
 		</property>
@@ -82,5 +83,5 @@
 			<value>22.0</value>
 		</property>
 	</bean>
-		
+
 </beans>

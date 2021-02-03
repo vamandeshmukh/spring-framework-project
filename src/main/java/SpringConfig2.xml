@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<!-- scope of a bean -->
+
+	<bean id="employee" class="com.vaman.spring.demo.Employee">
+		<property name="id">
+			<value>101</value>
+		</property>
+	</bean>
+
+	<bean id="employee2" parent="employee">
+		<property name="id">
+			<value>102</value>
+		</property>
+		<property name="name">
+			<value>Sonu</value>
+		</property>
+	</bean>
+
+	<bean id="employee3" parent="employee2">
+		<property name="salary">
+			<value>10.5</value>
+		</property>
+	</bean>
+
+</beans>

@@ -1,6 +1,6 @@
 package com.vaman.spring.demo;
 
-public class Employee {
+public class Employee implements Person {
 
 	private int id;
 	private String name;
@@ -76,6 +76,11 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", dept=" + dept + "]";
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("Employee eats...");
 	}
 
 }
