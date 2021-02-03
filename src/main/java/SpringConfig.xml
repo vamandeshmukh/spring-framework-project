@@ -7,7 +7,7 @@
 
 	<!-- property injection / setter injection -->
 
-	<bean id="employee" class="com.vaman.spring.demo.Employee">
+	<bean id="employee" class="com.vaman.spring.xm.Employee">
 		<property name="id">
 			<value>101</value>
 		</property>
@@ -21,7 +21,7 @@
 
 	<!-- constructor injection -->
 
-	<bean id="employee2" class="com.vaman.spring.demo.Employee">
+	<bean id="employee2" class="com.vaman.spring.xm.Employee">
 		<constructor-arg value="102" type="int"></constructor-arg>
 		<constructor-arg value="Monu" type="java.lang.String"></constructor-arg>
 		<constructor-arg value="20.6" type="double"></constructor-arg>
@@ -29,7 +29,7 @@
 
 	<!-- collection injection -->
 
-	<bean id="department" class="com.vaman.spring.demo.Department">
+	<bean id="department" class="com.vaman.spring.xm.Department">
 		<property name="id" value="10"></property>
 		<property name="name" value="HR"></property>
 		<property name="functions">
@@ -44,7 +44,7 @@
 
 	<!-- inner beans -->
 
-	<bean id="employee3" class="com.vaman.spring.demo.Employee">
+	<bean id="employee3" class="com.vaman.spring.xm.Employee">
 		<property name="id">
 			<value>103</value>
 		</property>
@@ -55,7 +55,7 @@
 			<value>15.8</value>
 		</property>
 		<property name="dept">
-			<bean id="department" class="com.vaman.spring.demo.Department">
+			<bean id="department" class="com.vaman.spring.xm.Department">
 				<property name="id" value="20"></property>
 				<property name="name" value="Marketing"></property>
 				<property name="functions">
@@ -71,7 +71,7 @@
 
 	<!-- autowiring -->
 
-	<bean id="employee4" class="com.vaman.spring.demo.Employee"
+	<bean id="employee4" class="com.vaman.spring.xm.Employee"
 		autowire="byName">
 		<property name="id">
 			<value>104</value>

@@ -5,7 +5,7 @@
 
 	<!-- scope of a bean -->
 
-	<bean id="employee" class="com.vaman.spring.demo.Employee">
+	<bean id="employee" class="com.vaman.spring.xm.Employee">
 		<property name="id">
 			<value>101</value>
 		</property>

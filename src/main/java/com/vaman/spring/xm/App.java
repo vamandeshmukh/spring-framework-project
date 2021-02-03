@@ -1,4 +1,4 @@
-package com.vaman.spring.demo;
+package com.vaman.spring.xm;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;

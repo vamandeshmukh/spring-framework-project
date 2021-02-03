@@ -1,4 +1,4 @@
-package com.vaman.spring.demo;
+package com.vaman.spring.xm;
 
 import java.util.List;
 
