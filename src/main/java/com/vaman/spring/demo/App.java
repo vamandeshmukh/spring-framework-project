@@ -11,24 +11,33 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 
 public class App {
+
 	public static void main(String[] args) {
+
 		System.out.println("Start");
 
+//		object creation without spring 
 //		Employee obj = new Employee(); 
 //		obj.work();
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
 
-//		Employee emp = (Employee) context.getBean("employee");
-		Employee emp = context.getBean(Employee.class, "employee");
+//		Employee emp = (Employee) context.getBean("employee"); // also possible 
 
+		Employee emp = context.getBean("employee", Employee.class);
 		System.out.println(emp.toString());
 
-		Department dept = context.getBean(Department.class, "department");
+		Employee emp2 = context.getBean("employee2", Employee.class);
+		System.out.println(emp2.toString());
+
+		Department dept = context.getBean("department", Department.class);
 		System.out.println(dept.toString());
 
-		Country country = context.getBean("aaa", Country.class);
-		country.travel();
+		Employee emp3 = context.getBean("employee3", Employee.class);
+		System.out.println(emp3.toString());
+
+		Employee emp4 = context.getBean("employee4", Employee.class);
+		System.out.println(emp4.toString());
 
 		((AbstractApplicationContext) context).close();
 

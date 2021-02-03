@@ -2,18 +2,14 @@ package com.vaman.spring.demo;
 
 public class Country {
 
-	private City zzzz;
+	private City city;
 
-	public Country() {
-		System.out.println("Country constructor");
+	public City getCity() {
+		return city;
 	}
 
-	public City getZzzz() {
-		return zzzz;
-	}
-
-	public void setZzzz(City city) {
-		this.zzzz = city;
+	public void setCity(City city) {
+		this.city = city;
 	}
 
 	public void visitCountry() {
@@ -22,6 +18,6 @@ public class Country {
 
 	public void travel() {
 		this.visitCountry();
-		zzzz.visitCity();
+		city.visitCity();
 	}
 }

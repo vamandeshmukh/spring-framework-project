@@ -7,13 +7,21 @@
 
 	<!-- property injection / setter injection -->
 
-	<!-- <bean id="employee2" class="com.vaman.spring.demo.Employee"> <property 
-		name="id"> <value>101</value> </property> <property name="name"> <value>Sonu</value> 
-		</property> <property name="salary"> <value>10.5</value> </property> </bean> -->
+	<bean id="employee" class="com.vaman.spring.demo.Employee">
+		<property name="id">
+			<value>101</value>
+		</property>
+		<property name="name">
+			<value>Sonu</value>
+		</property>
+		<property name="salary">
+			<value>10.5</value>
+		</property>
+	</bean>
 
 	<!-- constructor injection -->
 
-	<bean id="employee" class="com.vaman.spring.demo.Employee">
+	<bean id="employee2" class="com.vaman.spring.demo.Employee">
 		<constructor-arg value="102" type="int"></constructor-arg>
 		<constructor-arg value="Monu" type="java.lang.String"></constructor-arg>
 		<constructor-arg value="20.6" type="double"></constructor-arg>
@@ -34,13 +42,45 @@
 		</property>
 	</bean>
 
-	<bean id="zzzz" class="com.vaman.spring.demo.City">
-		</bean>
+	<!-- inner beans -->
 
-		<bean id="aaa" class="com.vaman.spring.demo.Country" autowire="byName" >
+	<bean id="employee3" class="com.vaman.spring.demo.Employee">
+		<property name="id">
+			<value>103</value>
+		</property>
+		<property name="name">
+			<value>Tonu</value>
+		</property>
+		<property name="salary">
+			<value>15.8</value>
+		</property>
+		<property name="dept">
+			<bean id="department" class="com.vaman.spring.demo.Department">
+				<property name="id" value="20"></property>
+				<property name="name" value="Marketing"></property>
+				<property name="functions">
+					<list>
+						<value>Sales</value>
+						<value>Promotions</value>
+						<value>Customer Care</value>
+					</list>
+				</property>
+			</bean>
+		</property>
 	</bean>
+	
+		<!-- autowiring -->
 
+	<bean id="employee4" class="com.vaman.spring.demo.Employee" autowire="byName">
+		<property name="id">
+			<value>104</value>
+		</property>
+		<property name="name">
+			<value>Ponu</value>
+		</property>
+		<property name="salary">
+			<value>22.0</value>
+		</property>
+	</bean>
+		
 </beans>
-
-
-
