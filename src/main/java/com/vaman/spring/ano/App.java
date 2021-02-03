@@ -11,10 +11,13 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
 public class App {
+
 	public static void main(String[] args) {
+		System.out.println("Start");
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(App.class);
+
 		Employee emp = ctx.getBean(Employee.class);
-		emp.work(); 
+		emp.department.work();
 	}
 
 }

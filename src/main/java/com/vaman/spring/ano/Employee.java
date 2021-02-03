@@ -5,8 +5,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class Employee {
 
-	public void work() {
-		System.out.println("Employee works...");
+	Department department;
+
+	public Employee(Department department) {
+		super();
+		this.department = department;
 	}
 
 }
