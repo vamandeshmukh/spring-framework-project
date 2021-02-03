@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<!-- bean definitions here -->
+
+	<!-- property injection / setter injection -->
+
+	<!-- <bean id="employee2" class="com.vaman.spring.demo.Employee"> <property 
+		name="id"> <value>101</value> </property> <property name="name"> <value>Sonu</value> 
+		</property> <property name="salary"> <value>10.5</value> </property> </bean> -->
+
+	<!-- constructor injection -->
+
+	<bean id="employee" class="com.vaman.spring.demo.Employee">
+		<constructor-arg value="102" type="int"></constructor-arg>
+		<constructor-arg value="Monu" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="20.6" type="double"></constructor-arg>
+	</bean>
+
+	<!-- collection injection -->
+
+	<bean id="department" class="com.vaman.spring.demo.Department">
+		<property name="id" value="10"></property>
+		<property name="name" value="HR"></property>
+		<property name="functions">
+			<list>
+				<value>HRM</value>
+				<value>Payroll</value>
+				<value>CSR</value>
+				<value>EE</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="zzzz" class="com.vaman.spring.demo.City">
+		</bean>
+
+		<bean id="aaa" class="com.vaman.spring.demo.Country" autowire="byName" >
+	</bean>
+
+</beans>
+
+
+
