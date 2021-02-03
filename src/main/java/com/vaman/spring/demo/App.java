@@ -14,9 +14,6 @@ public class App {
 
 	public static void main(String[] args) {
 
-		System.out.println("Start");
-
-//		object creation without spring 
 //		Employee obj = new Employee(); 
 //		obj.work();
 
@@ -40,8 +37,5 @@ public class App {
 		System.out.println(emp4.toString());
 
 		((AbstractApplicationContext) context).close();
-
-		System.out.println("End");
-
 	}
 }

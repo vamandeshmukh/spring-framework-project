@@ -8,6 +8,8 @@ public class Department {
 	private String name;
 	private List<String> functions;
 
+	// constructors, getters, setters, toString etc
+
 	public Department() {
 		super();
 	}

@@ -2,8 +2,6 @@ package com.vaman.spring.demo;
 
 public class Employee {
 
-	// boilerplate code
-
 	private int id;
 	private String name;
 	private double salary;
