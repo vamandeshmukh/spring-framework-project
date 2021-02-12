@@ -1,2 +1,2 @@
 # spring-framework-project
- spring core conepts discussion with examples
+ spring framework core conepts discussion with examples
